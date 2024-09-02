@@ -1,0 +1,106 @@
+In this first step, please do not write any production code in src/main/java, but only define tests in src/test/java.
+
+Write a test that ensures the method getX in the class PlayerCharacter returns the value 0. Initially, the player should always be positioned in the middle of the game field.
+
+What is the name of the test class where you test the functions for PlayerCharacter?
+
+
+/////////////////////////////
+
+
+In this second step, your task is to find the simplest way to make the test pass. So it's time to create the class PlayerCharacter and implement the method getX.
+
+Run the test: it should now be green (no compilation error, runnable, and the result is indeed 0).
+
+Commit and push your changes now.
+
+
+////////////////////////////
+
+
+Most likely, there are no optimization possibilities (refactoring) at this point. But if there are any, please perform them and push your changes.
+
+////////////////////////////
+
+Please write a second test that ensures the method getY in the class PlayerCharacter returns the value 0.
+
+Run the test: it should now be red (compilation error, not runnable).
+
+
+///////////////////////////
+
+
+In this second step, your task is to find the simplest way to make the second test pass. So it's time to implement the method getY.
+
+
+///////////////////////////
+
+
+Write a test that ensures that when the method move in the class PlayerCharacter is called with the argument "W", the game character moves one position up (after the movement, Y = 1 should be true).
+
+Attention: for now, only write the test, do not change anything in src/main/java.
+
+///////////////////////////
+
+
+Now write the minimal implementation to make all tests pass.
+
+Once all tests are passing, please commit and push your changes.
+
+
+///////////////////////////
+
+
+Do you see any possibilities for improvement? If yes, please make those changes and push your modifications.
+Tip: static int x = 0;
+
+
+//////////////////////////
+
+Continue strictly following the steps you have learned in the following order:
+
+
+    Write a single test
+
+    Ensure that the test is failing
+
+    Write a minimal implementation to make the test pass
+
+    Commit and push the code
+
+    Perform refactoring as necessary (possibly commit and push again)
+
+
+And implement one by one the following requirements:
+
+
+    move S (down)
+
+    move D (right)
+
+    move A (left)
+
+///////////////////////////
+
+
+Your task is to develop a Java program together that implements a function to calculate the so-called 'n-th Fibonacci number'. The Fibonacci numbers are a series of numbers in which each number is the sum of the two preceding numbers. The Fibonacci sequence starts with the numbers 0 and 1, and the next numbers are 1, 2, 3, 5, 8, 13, 21, etc.
+
+First, write a test case for the Fibonacci function and ensure that it fails (since the function is not yet implemented). Then, gradually implement the function to pass the test successfully. Write additional tests to ensure that the function works correctly.
+
+At the end, the Fibonacci function should be fully covered by tests.
+
+Go through the steps together. Take turns so that everyone gets an equal chance!
+
+
+    Write the first test case for the Fibonacci function (e.g. Test the Fibonacci number for n=0 or n=1).
+
+    Implement the Fibonacci function so that the first test case passes.
+
+    Write additional tests to verify different cases of the Fibonacci function.
+
+    Improve the implementation of the Fibonacci function to make all tests pass.
+
+    Post here the link to a GitHub repository where you have developed your solution for the Fibonacci task together.
+
+
+If you have already completed this task before, you may work on the bonus task on the next page.
