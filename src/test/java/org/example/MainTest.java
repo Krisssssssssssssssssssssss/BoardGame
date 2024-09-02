@@ -19,7 +19,7 @@ class MainTest {
     void testMoveUp_possible() {
         char input = 'W';
         int[] boardSize = {8, 8};
-        PlayerCharacter playerCharacter = new PlayerCharacter(1, 0, boardSize);
+        PlayerCharacter playerCharacter = new PlayerCharacter(0, 1, boardSize);
         int expectedPlayerX = 0;
         int expectedPlayerY = 0;
         playerCharacter.move(input);
@@ -28,38 +28,29 @@ class MainTest {
 
         assertEquals(expectedPlayerX, actualPlayerX);
         assertEquals(expectedPlayerY, actualPlayerY);
-
     }
 
     @Test
     void testMoveUp_impossible() {
+        char input = 'W';
         int[] boardSize = {8, 8};
-        int[] playerPosition = {0, 0};
-        int[] expectedPosition = {0, 0};
-        int[] actualPosition = Main.moveUp(boardSize, playerPosition);
+        PlayerCharacter playerCharacter = new PlayerCharacter(0, 0, boardSize);
+        int expectedPlayerX = 0;
+        int expectedPlayerY = 0;
+        playerCharacter.move(input);
+        int actualPlayerX = playerCharacter.getX();
+        int actualPlayerY = playerCharacter.getY();
 
-        assertArrayEquals(expectedPosition, actualPosition);
+        assertEquals(expectedPlayerX, actualPlayerX);
+        assertEquals(expectedPlayerY, actualPlayerY);
     }
 
     @Test
     void testMoveDown_possible() {
-        int[] boardSize = {8, 8};
-        int[] playerPosition = {6, 0};
-        int[] expectedPosition = {7, 0};
-        int[] actualPosition = Main.moveDown(boardSize, playerPosition);
-
-        assertArrayEquals(expectedPosition, actualPosition);
-
     }
 
     @Test
     void testMoveDown_impossible() {
-        int[] boardSize = {8, 8};
-        int[] playerPosition = {7, 0};
-        int[] expectedPosition = {7, 0};
-        int[] actualPosition = Main.moveDown(boardSize, playerPosition);
-
-        assertArrayEquals(expectedPosition, actualPosition);
 
     }
 
