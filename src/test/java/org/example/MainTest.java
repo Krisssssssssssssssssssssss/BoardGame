@@ -17,12 +17,17 @@ class MainTest {
 
     @Test
     void testMoveUp_possible() {
+        char input = 'W';
         int[] boardSize = {8, 8};
-        int[] playerPosition = {1, 0};
-        int[] expectedPosition = {0, 0};
-        int[] actualPosition = Main.moveUp(boardSize, playerPosition);
+        PlayerCharacter playerCharacter = new PlayerCharacter(1, 0, boardSize);
+        int expectedPlayerX = 0;
+        int expectedPlayerY = 0;
+        playerCharacter.move(input);
+        int actualPlayerX = playerCharacter.getX();
+        int actualPlayerY = playerCharacter.getY();
 
-        assertArrayEquals(expectedPosition, actualPosition);
+        assertEquals(expectedPlayerX, actualPlayerX);
+        assertEquals(expectedPlayerY, actualPlayerY);
 
     }
 
