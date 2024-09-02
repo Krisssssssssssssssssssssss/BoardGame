@@ -17,8 +17,7 @@ class Main {
         if (playerPosition[0] == 0) {
             return playerPosition;
         } else {
-            int[] result = {playerPosition[0] - 1, playerPosition[1]};
-            return result;
+            return new int[]{playerPosition[0] - 1, playerPosition[1]};
         }
     }
 }
