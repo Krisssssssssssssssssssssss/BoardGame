@@ -47,11 +47,32 @@ class MainTest {
 
     @Test
     void testMoveDown_possible() {
+        char input = 'S';
+        int[] boardSize = {8, 8};
+        PlayerCharacter playerCharacter = new PlayerCharacter(0,2, boardSize);
+        int expectedPlayerX = 0;
+        int expectedPlayerY = 3;
+        playerCharacter.move(input);
+        int actualPlayerX = playerCharacter.getX();
+        int actualPlayerY = playerCharacter.getY();
+
+        assertEquals(expectedPlayerX, actualPlayerX);
+        assertEquals(expectedPlayerY, actualPlayerY);
     }
 
     @Test
     void testMoveDown_impossible() {
+        char input = 'S';
+        int[] boardSize = {8, 8};
+        PlayerCharacter playerCharacter = new PlayerCharacter(0,7, boardSize);
+        int expectedPlayerX = 0;
+        int expectedPlayerY = 7;
+        playerCharacter.move(input);
+        int actualPlayerX = playerCharacter.getX();
+        int actualPlayerY = playerCharacter.getY();
 
+        assertEquals(expectedPlayerX, actualPlayerX);
+        assertEquals(expectedPlayerY, actualPlayerY);
     }
 
     void testMoveLeft() {
