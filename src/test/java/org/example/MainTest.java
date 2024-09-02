@@ -36,7 +36,25 @@ class MainTest {
         assertArrayEquals(expectedPosition, actualPosition);
     }
 
-    void testMoveDown() {
+    @Test
+    void testMoveDown_possible() {
+        int[] boardSize = {8, 8};
+        int[] playerPosition = {6, 0};
+        int[] expectedPosition = {7, 0};
+        int[] actualPosition = Main.moveDown(boardSize, playerPosition);
+
+        assertArrayEquals(expectedPosition, actualPosition);
+
+    }
+
+    @Test
+    void testMoveDown_impossible() {
+        int[] boardSize = {8, 8};
+        int[] playerPosition = {7, 0};
+        int[] expectedPosition = {7, 0};
+        int[] actualPosition = Main.moveDown(boardSize, playerPosition);
+
+        assertArrayEquals(expectedPosition, actualPosition);
 
     }
 
