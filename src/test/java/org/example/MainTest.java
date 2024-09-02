@@ -18,8 +18,8 @@ class MainTest {
     @Test
     void testMoveUp_possible() {
         char input = 'W';
-        int[] boardSize = {8, 8};
-        PlayerCharacter playerCharacter = new PlayerCharacter(0, 1, boardSize);
+        Board board = new Board(8, 8);
+        PlayerCharacter playerCharacter = new PlayerCharacter(0, 1, board);
         int expectedPlayerX = 0;
         int expectedPlayerY = 0;
         playerCharacter.move(input);
@@ -33,8 +33,8 @@ class MainTest {
     @Test
     void testMoveUp_impossible() {
         char input = 'W';
-        int[] boardSize = {8, 8};
-        PlayerCharacter playerCharacter = new PlayerCharacter(0, 0, boardSize);
+        Board board = new Board(8, 8);
+        PlayerCharacter playerCharacter = new PlayerCharacter(0, 0, board);
         int expectedPlayerX = 0;
         int expectedPlayerY = 0;
         playerCharacter.move(input);
@@ -48,8 +48,8 @@ class MainTest {
     @Test
     void testMoveDown_possible() {
         char input = 'S';
-        int[] boardSize = {8, 8};
-        PlayerCharacter playerCharacter = new PlayerCharacter(0,2, boardSize);
+        Board board = new Board(8, 8);
+        PlayerCharacter playerCharacter = new PlayerCharacter(0,2, board);
         int expectedPlayerX = 0;
         int expectedPlayerY = 3;
         playerCharacter.move(input);
@@ -63,8 +63,8 @@ class MainTest {
     @Test
     void testMoveDown_impossible() {
         char input = 'S';
-        int[] boardSize = {8, 8};
-        PlayerCharacter playerCharacter = new PlayerCharacter(0,7, boardSize);
+        Board board = new Board(8, 8);
+        PlayerCharacter playerCharacter = new PlayerCharacter(0,7, board);
         int expectedPlayerX = 0;
         int expectedPlayerY = 7;
         playerCharacter.move(input);
@@ -78,8 +78,8 @@ class MainTest {
     @Test
     void testMoveLeft() {
         char input = 'A';
-        int[] boardSize = {8, 8};
-        PlayerCharacter playerCharacter = new PlayerCharacter(3, 0, boardSize);
+        Board board = new Board(8, 8);
+        PlayerCharacter playerCharacter = new PlayerCharacter(3, 0, board);
         int expectedPlayerX = 2;
         int expectedPlayerY = 0;
         playerCharacter.move(input);
@@ -92,8 +92,8 @@ class MainTest {
     @Test
     void testMoveLeftimpossible() {
         char input = 'A';
-        int[] boardSize = {8, 8};
-        PlayerCharacter playerCharacter = new PlayerCharacter(0,0, boardSize);
+        Board board = new Board(8, 8);
+        PlayerCharacter playerCharacter = new PlayerCharacter(0,0, board);
         int expectedPlayerX = 0;
         int expectedPlayerY = 0;
         playerCharacter.move(input);
@@ -107,8 +107,8 @@ class MainTest {
     @Test
     void testMoveRight() {
         char input = 'D';
-        int[] boardSize = {8, 8};
-        PlayerCharacter playerCharacter = new PlayerCharacter(3, 0, boardSize);
+        Board board = new Board(8, 8);
+        PlayerCharacter playerCharacter = new PlayerCharacter(3, 0, board);
         int expectedPlayerX = 4;
         int expectedPlayerY = 0;
         playerCharacter.move(input);
@@ -121,8 +121,8 @@ class MainTest {
     @Test
     void testMoveRightimpossible() {
         char input = 'D';
-        int[] boardSize = {8, 8};
-        PlayerCharacter playerCharacter = new PlayerCharacter(7,0, boardSize);
+        Board board = new Board(8, 8);
+        PlayerCharacter playerCharacter = new PlayerCharacter(7,0, board);
         int expectedPlayerX = 7;
         int expectedPlayerY = 0;
         playerCharacter.move(input);
