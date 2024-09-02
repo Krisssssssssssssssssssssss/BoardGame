@@ -1,7 +1,5 @@
 package org.example;
 
-import jdk.internal.net.http.common.Pair;
-
 import java.util.Arrays;
 
 class Main {
@@ -12,6 +10,7 @@ class Main {
                 {false, false, false},
         };
 
+        // {row, column}
         int[] boardSizeGood = {5, 5};
 
     }
@@ -37,13 +36,15 @@ class Main {
         // Set player new position.
         board[playerLine][playerRow] = false;
         board[playerLine - 1][playerRow] = true;
+
+        return board;
     }
 
     public static int[] moveUpGood(int[] boardSize, int[]playerPosition) {
-        if (playerPosition[1] == 0) {
+        if (playerPosition[0] == 0) {
             return playerPosition;
         } else {
-            int[] result = {playerPosition[0], playerPosition[1] - 1};
+            int[] result = {playerPosition[0] - 1, playerPosition[1]};
             return result;
         }
     }

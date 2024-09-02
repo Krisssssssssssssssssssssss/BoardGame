@@ -1,5 +1,8 @@
 package org.example;
 
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -13,6 +16,7 @@ class MainTest {
 
     }
 
+    @Test
     void testMoveUp_possible() {
         boolean[][] board = {
                 {false, false, false},
@@ -30,12 +34,43 @@ class MainTest {
         assertArrayEquals(expected, actual);
     }
 
-    void testMoveUp_impossible() {
+    @Test
+    void testMoveUpGood_possible() {
+        int[] boardSize = {8, 8};
+        int[] playerPosition = {1, 0};
+        int[] expectedPosition = {0, 0};
+        int[] actualPosition = Main.moveUpGood(boardSize, playerPosition);
+
+        assertArrayEquals(expectedPosition, actualPosition);
+
+    }
+
+    @Test
+    void testMoveUpBad_impossible() {
         boolean[][] board = {
                 {true, false, false},
                 {false, false, false},
                 {false, false, false},
         };
+        boolean[][] expected = {
+                {true, false, false},
+                {false, false, false},
+                {false, false, false},
+        };
+        boolean[][] actual = Main.moveUpBad(board);
+
+        assertArrayEquals(expected, actual);
+    }
+
+
+    @Test
+    void testMoveUpGood_impossible() {
+        int[] boardSize = {8, 8};
+        int[] playerPosition = {0, 0};
+        int[] expectedPosition = {0, 0};
+        int[] actualPosition = Main.moveUpGood(boardSize, playerPosition);
+
+        assertArrayEquals(expectedPosition, actualPosition);
     }
 
     void testMoveDown() {
