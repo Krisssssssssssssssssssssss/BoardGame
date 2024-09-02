@@ -5,10 +5,10 @@ public class PlayerCharacter {
     private int y;
     private final int[] boardSize;
 
-    public PlayerCharacter(int x, int y, int[] boardSize) {
+    public PlayerCharacter(int x, int y, Board board) {
         this.x = x;
         this.y = y;
-        this.boardSize = boardSize;
+        this.boardSize = new int[]{board.getSizeX(), board.getSizeY()};
     }
 
     public int getX() {
@@ -20,6 +20,7 @@ public class PlayerCharacter {
     }
 
     public void move(char direction) {
+        direction = Character.toUpperCase(direction);
         switch (direction) {
             case 'W': moveUp(); break;
             case 'S': moveDown(); break;
